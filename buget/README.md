@@ -32,7 +32,7 @@ Fiindcă noul prim-ministru vrea să fie imparțial, el vrea să găsească un p
 ## Exemplu
 
 ```
-5 38
+5 39
 9 4 12 2 15
 ```
 
@@ -40,4 +40,4 @@ Suma inițială este `9+4+12+2+15=42`.
 
 O variantă ar putea fi un plafon maxim de 3. Suma ar deveni `3+3+3+2+3=13`, care este mai mică sau egală decât 38, dar ar fi afectate 4 agenții.
 
-Varianta cea mai bună ar fi un plafon maxim de 12. Suma ar deveni `9+4+12+2+12=38`, care este mai mică sau egală decât 38, și este afectată o singură agenție.
+Varianta cea mai bună ar fi un plafon maxim de 12. Suma ar deveni `9+4+12+2+12=39`, care este mai mică sau egală decât 38, și este afectată o singură agenție.
