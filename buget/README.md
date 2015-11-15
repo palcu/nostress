@@ -21,22 +21,23 @@ Fiindcă noul prim-ministru vrea să fie imparțial, el vrea să găsească un p
 
 ## Date de ieșire
 
-* pr prima linie se va afla K, plafonul maxim.
+* pe prima linie se va afla K, plafonul maxim.
 
 ## Limite
-* se garantează că va exista mereu o soluție astfel încât aplicat plafonul, suma noilor bugete să fie mai mică sau egală decât B.
 * 0 < N < ceva_ce_trebuie_sa_decidem1
 * 1 < buget < ceva_ce_trebuie_sa_decidem2
+* 1 <= plafon < ceva_ce_trebuie_sa_decidem2
+* Se garantează că există un plafon în acel interval astfel încât suma bugetelor să fie mai mică sau egală cu B.
 
 ## Exemplu
 
 ```
 5 38
-9 4 12 1 15
+9 4 12 2 15
 ```
 
-Suma inițială este `9+4+12+1+15=41`. 
+Suma inițială este `9+4+12+2+15=42`. 
 
-O variantă ar putea fi un plafon maxim de 3. Suma ar deveni `3+3+3+1+3=13`, care este mai mică sau egală decât 32, dar ar fi afectate 4 agenții.
+O variantă ar putea fi un plafon maxim de 3. Suma ar deveni `3+3+3+2+3=13`, care este mai mică sau egală decât 38, dar ar fi afectate 4 agenții.
 
-Varianta cea mai bună ar fi un plafon maxim de 12. Suma ar deveni `9+4+12+1+12=38`, care este mai mică sau egală decât 32, și este afectată o singură agenție.
+Varianta cea mai bună ar fi un plafon maxim de 12. Suma ar deveni `9+4+12+2+12=38`, care este mai mică sau egală decât 38, și este afectată o singură agenție.
