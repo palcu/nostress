@@ -49,19 +49,11 @@ int main(){
     bool canMeet = false;
     while (i<decan.size() && j<mihaela.size() && !canMeet) {
         int length = get_overlap_length(decan[i], mihaela[j]);
-        if (length > 0) {
-            if (length >= minMeetingLength) {
-                canMeet = true;
-                int start_time = max(decan[i].first, mihaela[j].first);
-                fout << start_time << " " << start_time + minMeetingLength << "\n";
-            } else {
-                if (decan[i].second - decan[i].first < mihaela[j].second - mihaela[j].first) {
-                    i++;
-                } else {
-                    j++;
-                }
-            }
-        } else if (decan[i].first < mihaela[j].first) {
+        if (length >= minMeetingLength) {
+            canMeet = true;
+            int start_time = max(decan[i].first, mihaela[j].first);
+            fout << start_time << " " << start_time + minMeetingLength << "\n";
+        } else if (decan[i].second < mihaela[j].second) {
             i++;
         } else {
             j++;
