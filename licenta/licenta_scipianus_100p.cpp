@@ -35,13 +35,21 @@ int main()
 	sort(a + 1, a + n1 + 1);
 	sort(b + 1, b + n2 + 1);
 	sol.first = sol.second = -1;
-	for(i = j = 1; i <= n1 && j <= n2; ++i)
+	for(i = j = 1; i <= n1 && j <= n2;)
 	{
+		while(i <= n1 && a[i].second < b[j].first)
+			i++;
+		if(i > n1)
+			break;
 		while(j <= n2 && b[j].second < a[i].first)
 			j++;
 		if(j > n2)
 			break;
 		now = Intersect(a[i], b[j]);
+		if(a[i].second < b[j].second)
+			i++;
+		else
+			j++;
 		if(now.first == -1)
 			continue;
 		if(now.second - now.first >= K)
