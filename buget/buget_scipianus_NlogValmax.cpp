@@ -6,8 +6,9 @@
 #include <fstream>
 #include <algorithm>
 using namespace std;
+ifstream fin("buget.in");
 int n;
-long long B, v[500100], maxim;
+long long B, v[1000100], maxim;
 
 inline bool Ok(long long plafon)
 {
@@ -45,7 +46,6 @@ inline long long BinarySearch()
 int main()
 {
 	int i;
-	ifstream fin("buget.in");
 	fin >> n >> B;
 	for(i = 1; i <= n; ++i)
 	{

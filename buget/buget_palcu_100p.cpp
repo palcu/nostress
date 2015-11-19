@@ -4,10 +4,13 @@
  * alex [dot] palcuie [at] gmail [dot] com
  * http://blog.palcu.ro/
 ****************************************************/
+#include <algorithm>
 #include <fstream>
 #include <vector>
 
 using namespace std;
+
+#define int64 long long 
 
 vector<int> budgets;
 
@@ -15,7 +18,7 @@ int main() {
     ifstream fin("buget.in");
     ofstream fout("buget.out");
     
-    int n, b, sum=0;
+    int n; int64 b, sum=0;
     fin >> n >> b;
     for (int i=0; i<n; i++) {
         int x; fin >> x;
@@ -28,7 +31,7 @@ int main() {
     sort(budgets.begin(), budgets.end(), greater<int>());
 
     for (int i=0; i<budgets.size(); i++) {
-        int possible_budget = sum + budgets[i] * i;
+        int64 possible_budget = sum + budgets[i] * i;
         // cerr << possible_budget << endl;
         if (possible_budget <= b) {
             fout << budgets[i] << endl;
@@ -39,4 +42,3 @@ int main() {
     
     return 0;
 }
-
