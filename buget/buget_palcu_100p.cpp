@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <cassert>
 
 using namespace std;
 
@@ -23,11 +24,19 @@ int main() {
 
     int n; int64 b, max_x=-1;
     fin >> n >> b;
+
+    assert(1 <= n && n < pow(10, 5));
+    assert(1 <= b && b < pow(10, 15));
+
+    int64 sum_x = 0;
     for (int i=0; i<n; i++) {
         int x; fin >> x;
+        assert(0 <= x && x < pow(10, 9));
         max_x = max_x > x ? max_x : x;
+        sum_x += x;
         budgets.push_back(x);
     }
+    assert(b < sum_x);
 
     int left = 1, right = max_x, cap = -1;
     while (left <= right) {
